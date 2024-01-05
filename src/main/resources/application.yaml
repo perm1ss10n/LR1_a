@@ -1,0 +1,23 @@
+spring:
+  main:
+    allow-circular-references: true
+  application:
+    name: LR1
+  jpa:
+    show-sql: false
+    database: postgresql
+    generate-ddl: false
+    properties:
+      hibernate:
+        show_sql=false:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    username: ${DB_USER:postgres}
+    password: ${DB_PASS:896699}
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5433}/postgres
+    driver-class-name: org.postgresql.Driver
+
+server:
+  port: ${PORT:8081}
+
